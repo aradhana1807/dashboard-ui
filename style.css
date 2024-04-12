@@ -212,7 +212,7 @@ body {
 }
 
 .light-theme {
-  --background: #dad9df;
+  --background: #e9e9e9;
   --text: #000;
   --highlight: linear-gradient(to right, #ff874a, #fe8b46, #fd9042, #fb943e, #f9993a, #f9a33d, #f9ac41, #f9b646, #fbc755, #fcd765, #fde777, #fff78a);
 
@@ -329,4 +329,15 @@ body {
   .grid-items__change p {
     font-size: 10px;
   }
+}
+
+@media screen and (max-width: 360px) {
+  .container {
+    padding: 30px 20px;
+  }
+
+  .header__headings h1 {
+    font-size: 24px;
+  }
+  
 }
