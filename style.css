@@ -1,17 +1,37 @@
 :root {
   --background: #222831;
-  --text: #FFF;
-  --highlight: linear-gradient(to left, #003c43, #034249, #064850, #0a4f56, #0e555d, #145c63, #19646a, #1f6b70, #297578, #32807f, #3c8a86, #47958d);
+  --text: #fff;
+  --highlight: linear-gradient(
+    to left,
+    #003c43,
+    #034249,
+    #064850,
+    #0a4f56,
+    #0e555d,
+    #145c63,
+    #19646a,
+    #1f6b70,
+    #297578,
+    #32807f,
+    #3c8a86,
+    #47958d
+  );
   --card-bg: #2c384a;
   --follower-color: #bababa;
   --tot-follower-color: #bababa;
+  --color-instagram-start: hsl(37, 97%, 70%);
+  --color-instagram-end: hsl(329, 70%, 58%);
+  --color-instagram: linear-gradient(
+    var(--color-instagram-start),
+    var(--color-instagram-end)
+  );
 }
 
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Ranade', sans-serif;
+  font-family: "Ranade", sans-serif;
 }
 
 body {
@@ -41,7 +61,7 @@ body {
 }
 
 .darkmode {
-  --background: #FFF;
+  --background: #fff;
   --text: #333;
   color: var(--text);
   width: 70px;
@@ -82,6 +102,37 @@ body {
   transition: 0.5s all ease;
 }
 
+.grid-items:hover {
+  cursor: pointer;
+  transform: scale(1.1);
+}
+
+#facebook-item {
+  border-top: #1a77e4 4px solid;
+}
+
+#twitter-item {
+  border-top: #1aa8ef 4px solid;
+}
+
+#instagram-item {
+  border-top-width: 4px;
+  border-top-style: solid;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  border-top-color: var(--instagram-color);
+  border-image: linear-gradient(
+      to right,
+      rgba(131, 58, 180, 1) 0%,
+      rgba(253, 29, 29, 1) 50%,
+      rgba(252, 176, 69, 1) 100%
+    )
+    1 0%;
+}
+
+#youtube-item {
+  border-top: #ff0000 4px solid;
+}
 .grid-items__heading {
   display: flex;
   align-items: center;
@@ -133,7 +184,14 @@ body {
 }
 
 #insta {
-  background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
+  background: radial-gradient(
+    circle at 30% 107%,
+    #fdf497 0%,
+    #fdf497 5%,
+    #fd5949 45%,
+    #d6249f 60%,
+    #285aeb 90%
+  );
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -147,7 +205,7 @@ body {
 }
 
 #fb {
-  background: #1A77E4;
+  background: #1a77e4;
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -214,7 +272,21 @@ body {
 .light-theme {
   --background: #e9e9e9;
   --text: #000;
-  --highlight: linear-gradient(to right, #ff874a, #fe8b46, #fd9042, #fb943e, #f9993a, #f9a33d, #f9ac41, #f9b646, #fbc755, #fcd765, #fde777, #fff78a);
+  --highlight: linear-gradient(
+    to right,
+    #ff874a,
+    #fe8b46,
+    #fd9042,
+    #fb943e,
+    #f9993a,
+    #f9a33d,
+    #f9ac41,
+    #f9b646,
+    #fbc755,
+    #fcd765,
+    #fde777,
+    #fff78a
+  );
 
   --card-bg: #c0d6eb;
   --follower-color: #8a8a8a;
@@ -304,7 +376,6 @@ body {
   .analytics-grid {
     grid-template-columns: repeat(1, 1fr);
   }
-
 }
 
 @media screen and (max-width: 400px) {
@@ -339,5 +410,4 @@ body {
   .header__headings h1 {
     font-size: 24px;
   }
-  
 }
